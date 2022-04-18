@@ -1,7 +1,5 @@
 function getLogin(req, res) {
-  res.render("index", {
-    title: "Login- Private Chat Application",
-  });
+  res.render("index");
 }
 
 module.exports = {

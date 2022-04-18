@@ -4,9 +4,9 @@ const router = express.Router();
 
 // internal export
 const { getLogin } = require("../controller/loginController");
-
+const setLocalVar = require("../middlewares/common/localVar");
 //login page
 
-router.get("/", getLogin);
+router.get("/", setLocalVar("Login"), getLogin);
 
 module.exports = router;

@@ -1,7 +1,5 @@
 function getInbox(req, res) {
-  res.render("inbox", {
-    title: "Inbox- Private Chat Application",
-  });
+  res.render("inbox");
 }
 
 module.exports = {
