@@ -6,7 +6,7 @@ const router = express.Router();
 const { getUsers } = require("../controller/usersController");
 const setLocalVar = require("../middlewares/common/localVar");
 const avatarUpload = require("../middlewares/users/avatarUpload");
-const { addUser } = require("../controller/usersController");
+const { addUser, removeUser } = require("../controller/usersController");
 const {
   addUserValidators,
   addUserValidationHandler,
@@ -26,4 +26,5 @@ router.post(
   addUser
 );
 
+router.delete("/:id", removeUser);
 module.exports = router;
