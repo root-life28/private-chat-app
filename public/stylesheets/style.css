@@ -1,12 +1,3 @@
-/*
- * Title: Project style sheet
- * Description: This is the main project style sheet of this project
- * Author: Sumit Saha ( Learn with Sumit )
- * Date: 23/05/2021
- *
- */
-
-/* css custom properties */
 :root {
   --primary: #171c2a;
   --secondary: #11141f;
@@ -65,7 +56,7 @@ input {
   background: var(--tertiary);
   outline: none;
   padding: 15px;
-  border: 1px solid var(--dark);
+  border: 1px solid #00b3bd;
   color: #fff;
   border-radius: 6px;
   font-size: 1.4rem;
@@ -75,10 +66,23 @@ input.error {
   border: 1px solid var(--red);
 }
 
+input[type="file"]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+
 input[type="submit"] {
   margin: 2rem auto;
   width: 200px;
-  background: linear-gradient(to right, var(--green), var(--blue));
+  background: linear-gradient(to right, #171c2a, #3e564a);
   cursor: pointer;
   font-weight: 600;
   transition: transform 0.1s ease-in-out;
@@ -169,7 +173,7 @@ input[type="submit"]:active {
   grid-template-columns: repeat(3, auto);
   justify-content: end;
   align-content: center;
-  height: 40px;
+  height: 50px;
   width: auto;
 }
 
@@ -185,7 +189,7 @@ input[type="submit"]:active {
 }
 
 .menu a {
-  color: var(--primary);
+  color: white;
   text-decoration: none;
 }
 
@@ -602,7 +606,7 @@ input[type="submit"]:active {
 }
 
 #users-table thead tr {
-  background-color: var(--green);
+  background-color: #a3b7cb;
   color: var(--primary);
   text-align: left;
 }
